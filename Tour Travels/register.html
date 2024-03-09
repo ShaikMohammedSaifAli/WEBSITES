@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="icon" href="./files/logo.png">
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<style>
+    
+</style>
+<body class="register-body">
+
+<nav>
+    <img src="./files/logo.png" class="logo" alt="Logo" title="FirstFlight Travels">
+    <ul class="navbar">
+        <li>
+            <a href="./index.html">Home</a>
+            <a href="./index.html#locations">Locations</a>
+            <a href="./index.html#package">Packages</a>
+            <a href="./about.html">About Us</a>
+            <a href="./contact.html">Contact Us</a>
+        </li>
+    </ul>
+</nav>
+
+<section class="registration">
+    <div class="register-form">
+        <h1>Register <span>Here</span></h1>
+        <form id="registrationForm" method="post" action="https://script.google.com/macros/s/AKfycbx6feVoQvF0_2DFhpTUKGR42wv5YcP5QE5YMwl5Li0drK_MI_vKfeyt9wbtTrwKG7Kv/exec">
+            <input type="text" name="myname1" placeholder="Name" id="name" required>
+            <input type="email" name="myemail" placeholder="Email-Id" id="email" required>
+            <input type="tel" name="myphone" placeholder="Phone No." id="phonenum" required>
+            <input type="text" name="myage" placeholder="No Of Members In The Trip" id="age" required>
+            <h4>Gender</h4><br>
+            <input type="radio" name="mygender" id="male" value="Male" required> Male &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            <input type="radio" name="mygender" id="female" value="Female"> Female
+            <h4>Travel Destination</h4><br>
+            <input type="radio" name="destination" id="kashmir" value="Goa" required> Goa &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="destination" id="istanbul" value="Istanbul"> Munnar &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="destination" id="paris" value="Paris"> Jaipur &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="destination" id="bali" value="Bali"> Manali &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="destination" id="dubai" value="Dubai"> Hyderabad 
+            <h4>Package</h4><br>
+            <input type="radio" name="locations" id="loc2" value="Silver"> Silver &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc3" value="Gold"> Gold &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="locations" id="loc4" value="Platinum"> Platinum &nbsp; &nbsp; &nbsp;
+            <br> <br>
+            <input type="checkbox" name="t&c" id="tnc" checked required> I accept the Terms & Conditions.
+            <br> <br>
+            <input type="submit" value="Submit" class="submitbtn">
+
+        </form>
+    </div>
+</section>
+<script>
+    
+</script>
+<!-- Footer -->
+
+<section class="footer">
+    <div class="foot">
+        <div class="footer-content">
+
+            <div class="footlinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footlinks">
+                <h4>Connect</h4>
+                <div class="social">
+                    <a href="" target="_blank"><i class='bx bxl-facebook'></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-twitter' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-linkedin' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-youtube' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-wordpress' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-github'></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="end">
+        <p>Copyright © 2022 Firstflight Travels All Rights Reserved.<br></p>
+    </div>
+</section>
+    <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phonenum").value;
+    var age = document.getElementById("age").value;
+    var gender = document.querySelector('input[name="mygender"]:checked').value;
+    var destination = document.querySelector('input[name="destination"]:checked').value;
+    var package = document.querySelector('input[name="locations"]:checked').value;
+    var tncChecked = document.getElementById("tnc").checked;
+    if (!name || !email || !phone || !age || !gender || !destination || !package || !tncChecked) {
+        alert("Please fill out all fields.");
+        return;
+    }
+    // Construct the URL with form data
+    var url = `submission.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&age=${encodeURIComponent(age)}&gender=${encodeURIComponent(gender)}&destination=${encodeURIComponent(destination)}&package=${encodeURIComponent(package)}`;
+    // Redirect to the submission page
+    window.location.href = url;
+});
+
+</script>
+</body>
+</html>
