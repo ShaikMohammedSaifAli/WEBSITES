@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRATION DETAILS</title>
+    <link rel="icon" href="/Files/Routes/Logos/Logo Tab.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: #333;
+        }
+
+        nav {
+            background-color: green;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar li,
+        a {
+            margin-right: 20px;
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #fff;
+
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footlinks {
+            flex: 1;
+        }
+
+        .footlinks h4 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .footlinks ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+
+        .footlinks ul li {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #191919;
+        }
+
+        .footlinks a {
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .social a i {
+            font-size: 24px;
+        }
+
+        .end {
+            margin-top: 20px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .title h1 {
+                font-size: 40px;
+                text-align: center;
+                margin-right: 0px;
+                display: block;
+
+            }
+
+            .navbar-brand {
+                position: absolute;
+                left: 0;
+                margin-left: 5px;
+            }
+
+            .navbar-toggler {
+                margin-left: 30%;
+                background-color: #fff;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .navbar-nav {
+                margin-left: auto;
+            }
+        }
+
+        .registration-details {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .details-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .details-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .details-container table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .details-container th,
+        .details-container td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .details-container th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .btn-container button:hover {
+            background-color: #45a049;
+        }
+
+        @media screen and (max-width: 768px) {
+            .details-container {
+                padding: 10px;
+            }
+        }
+
+        @keyframes highlight {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: white;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        .nav-link {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 1s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #404040
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            background-color: transparent;
+            border-radius: 25px;
+            z-index: -1;
+            transition: background-color 1s ease;
+        }
+
+        .nav-link:hover::before {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .round-button {
+            border: none;
+            background-color: transparent;
+        }
+
+        .round-button:hover .nav-link {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="/Routes/HomePage.html"><img src="/Files/Routes/Logos/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels"></a>
+        <div class="order-lg-2 order-md-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-3 order-md-2" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Routes/HomePage.html" style="color: #fff;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/HomePage.html#locations" style="color: #fff;">LOCATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/Register.html" style="color: #fff;">BOOK NOW</a>
+                </li>
+            </ul>
+        </div>
+    </nav><br>
+
+    <!-- Registration Details Section -->
+    <section class="registration-details">
+        <div class="details-container" style="background-color: #333;">
+            <h1 style="color: #fff; text-align: center; animation: highlight 1s infinite; font-size: 50px;">Registration Details</h1>
+            <table>
+                <tr>
+                    <th style=" margin-left: cm;">Field</th>
+                    <th style="text-align: left;">Details</th>
+                </tr>
+                <tbody id="details" style="color: #fff; text-align: left;"></tbody>
+            </table>
+            <div class="btn-container" id="buttonContainer">
+                <button onclick="editDetails()" id="editButton">Edit Details</button>
+                <button onclick="submitDetails()">Submit Details</button>
+                <button onclick="downloadDetails()">Download Details</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Quick Links</h4>
+                    <ul>
+                        <li style="color: #800080;"><a href="/Routes/Register.html">Register</a></li>
+                        <li style="color: #000000;"><a href="/Routes/BookingDetails.html">Track Your Booking</a></li>
+                        <li style="color: #000000;"><a href="/Routes/Register.html">Book Now</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Contact Us</h4>
+                    <p>If you have any questions or inquiries, feel free to contact us:</p>
+                    <ul>
+                        <li style="color: #fff">Email: <span style="color: teal;">AIAtourandtravels@gmail.com</span></li>
+                        <li style="color: #fff;">Phone: <span style="color: teal;">+91 9392773547</li></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <p>Copyright © 2022 Travels All Rights Reserved.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        window.onload = function() {
+            var detailsContainer = document.getElementById("details");
+            var urlParams = new URLSearchParams(window.location.search);
+            var name = urlParams.get('name');
+            var email = urlParams.get('email');
+            var phone = urlParams.get('phone');
+            var age = urlParams.get('age');
+            var gender = urlParams.get('gender');
+            var destination = urlParams.get('destination');
+            var bookingId = getUrlParameter('bookingID');
+            if (destination === "Kashmir") {
+                destination = "Goa"; 
+            }
+            if (destination === "Istanbul") {
+                destination = "Munnar"; 
+            }
+            if (destination === "Paris") {
+                destination = "Japiur"; 
+            }
+            if (destination === "Bali") {
+                destination = "Manali"; 
+            }
+            if (destination === "Dubai") {
+                destination = "Hyderabad"; 
+            }
+            var package = urlParams.get('package');
+
+            var detailsHTML = `
+            <tr><td><strong>Name:</strong></td><td id="name">${name}</td></tr>
+            <tr><td><strong>Email:</strong></td><td id="email">${email}</td></tr>
+            <tr><td><strong>Booking ID:</strong></td><td id="phone">${phone}</td></tr>
+            <tr><td><strong>Trip Start Date:</strong></td><td id="age">${age}</td></tr>
+            <tr><td><strong>No of Guests In The Trip:</strong></td><td id="gender">${gender}</td></tr>
+            <tr><td><strong>Destination:</strong></td><td id="destination">${destination}</td></tr>
+            <tr><td><strong>Package:</strong></td><td id="package">${package}</td></tr>
+        `;
+
+            detailsContainer.innerHTML = detailsHTML;
+        }
+
+        function editDetails() {
+            var nameElement = document.getElementById("name");
+            var emailElement = document.getElementById("email");
+            var phoneElement = document.getElementById("phone");
+            var ageElement = document.getElementById("age");
+            var genderElement = document.getElementById("gender");
+            var destinationElement = document.getElementById("destination");
+            var packageElement = document.getElementById("package");
+
+            nameElement.contentEditable = true;
+            emailElement.contentEditable = true;
+            phoneElement.contentEditable = true;
+            ageElement.contentEditable = true;
+            genderElement.contentEditable = true;
+            destinationElement.contentEditable = true;
+            packageElement.contentEditable = true;
+
+            var editButton = document.getElementById("editButton");
+            editButton.textContent = "Save Details";
+            editButton.setAttribute("onclick", "saveDetails()");
+        }
+
+        function saveDetails() {
+            var name = document.getElementById("name").textContent;
+            var email = document.getElementById("email").textContent;
+            var phone = document.getElementById("phone").textContent;
+            var age = document.getElementById("age").textContent;
+            var gender = document.getElementById("gender").textContent;
+            var destination = document.getElementById("destination").textContent;
+            var package = document.getElementById("package").textContent;
+
+            var nameElement = document.getElementById("name");
+            var emailElement = document.getElementById("email");
+            var phoneElement = document.getElementById("phone");
+            var ageElement = document.getElementById("age");
+            var genderElement = document.getElementById("gender");
+            var destinationElement = document.getElementById("destination");
+            var packageElement = document.getElementById("package");
+
+            nameElement.contentEditable = false;
+            emailElement.contentEditable = false;
+            phoneElement.contentEditable = false;
+            ageElement.contentEditable = false;
+            genderElement.contentEditable = false;
+            destinationElement.contentEditable = false;
+            packageElement.contentEditable = false;
+
+            var editButton = document.getElementById("editButton");
+            editButton.textContent = "Edit Details";
+            editButton.setAttribute("onclick", "editDetails()");
+
+        }
+
+        function submitDetails() {
+            var name = document.getElementById("name").textContent;
+            var email = document.getElementById("email").textContent;
+            var phone = document.getElementById("phone").textContent;
+            var age = document.getElementById("age").textContent;
+            var gender = document.getElementById("gender").textContent;
+            var destination = document.getElementById("destination").textContent;
+            var package = document.getElementById("package").textContent;
+
+            var formData = {
+                name: name,
+                email: email,
+                phone: phone,
+                age: age,
+                gender: gender,
+                destination: destination,
+                package: package
+            };
+
+            fetch('https://script.google.com/macros/s/AKfycbwkNuTEonsykdz6oLyAQNNovZG8EQKOLG6CuvFZvyh_p7n3E4Zd9YiYw6rMhEIh50dD/exec', {
+                    method: 'POST',
+                    body: JSON.stringify(formData)
+                })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+
+                    sendConfirmationEmail(name, email, package, formData);
+                })
+                .catch(error => {
+                    console.error(error);
+                    alert("Error submitting details.");
+                });
+        }
+
+        function sendConfirmationEmail(name, email, package, formData) {
+
+            emailjs.init("6YlQT0BkNBUItUoUm");
+
+            var emailParams = {
+                from_name: "Tour Travels",
+                to_name: name,
+                to_email: email,
+                package: package,
+
+                name: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+                age: formData.age,
+                gender: formData.gender,
+                destination: formData.destination
+            };
+
+            emailjs.send("service_1j5lern", "template_yvcjkys", emailParams)
+                .then(function(response) {
+                    console.log("Confirmation email sent successfully!", response);
+
+                    window.location.href = "thankyou.html?phone=" + encodeURIComponent(phone);
+                }, function(error) {
+                    console.error("Error sending confirmation email:", error);
+                    alert("There was an error sending the confirmation email. Please try again later.");
+                });
+        }
+
+        function downloadDetails() {
+            var detailsContent = document.getElementById("details").innerHTML;
+            var encodedDetailsContent = encodeURIComponent(detailsContent);
+            var dataUri = "data:text/html," + encodedDetailsContent;
+
+            var link = document.createElement("a");
+            link.setAttribute("href", dataUri);
+            link.setAttribute("download", "Registration Details.html");
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

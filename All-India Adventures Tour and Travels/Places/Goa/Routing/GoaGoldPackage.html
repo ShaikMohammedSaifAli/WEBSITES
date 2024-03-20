@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOA GOLD PACKAGE</title>
+    <link rel="icon" href="/Files/Routes/Logos/Logo Tab.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: #333;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        nav {
+            background-color: green;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar {
+            background-color: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar li,
+        a {
+            margin-right: 20px;
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #fff;
+
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footlinks {
+            flex: 1;
+        }
+
+        .footlinks h4 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .footlinks ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+
+        .footlinks ul li {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #191919;
+        }
+
+        .footlinks a {
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .social a i {
+            font-size: 24px;
+        }
+
+        .end {
+            margin-top: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .image-container img {
+            width: calc(33.33% - 10px);
+            height: auto;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .image-container img:last-child {
+            margin-right: 0;
+        }
+
+        @media only screen and (min-width: 768px) {
+            .image-container img {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media only screen and (min-width: 1024px) {
+            .image-container img {
+                width: calc(33.33% - 10px);
+            }
+        }
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .cards {
+            width: 48%;
+            margin-bottom: 20px;
+            background-color: #333;
+        }
+
+        .cards img {
+            width: 100%;
+            height: auto;
+        }
+
+        .cards-content {
+            padding: 10px;
+        }
+
+        .activity-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .activity {
+            width: calc(33.33% - 20px);
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .activity-description {
+            flex-grow: 1;
+            padding: 10px;
+        }
+
+        @media (max-width: 767px) {
+            .activity-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .activity {
+                width: 100%;
+            }
+
+            .book-now-button {
+                text-align: center;
+
+                display: block;
+
+                margin: 0 auto;
+
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .title h1 {
+                font-size: 40px;
+                text-align: center;
+                margin-right: 0px;
+                display: block;
+
+            }
+
+            .navbar-brand {
+                position: absolute;
+                left: 0;
+                margin-left: 5px;
+            }
+
+            .navbar-toggler {
+                margin-left: 30%;
+                background-color: #fff;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .navbar-nav {
+                margin-left: auto;
+            }
+        }
+
+        .submitbtn {
+            display: block;
+            margin: 0 auto;
+            background-color: #fc0050;
+            font-size: 27px;
+            font-weight: 600px;
+            border: 2px solid transparent;
+            border-radius: 60px;
+            width: 320px;
+            cursor: pointer;
+            transition: ease 0.30s;
+        }
+
+        .submitbtn:hover {
+            border: 2px solid #fc0050;
+            background-color: #fc0050;
+            transform: scale(1.1);
+            color: #fff;
+        }
+
+        .nav-link {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 1s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #404040
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            background-color: transparent;
+            border-radius: 25px;
+            z-index: -1;
+            transition: background-color 1s ease;
+        }
+
+        .nav-link:hover::before {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .round-button {
+            border: none;
+            background-color: transparent;
+        }
+
+        .round-button:hover .nav-link {
+            background-color: #333;
+            color: #fff;
+        }
+
+        @keyframes highlight {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: white;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        @keyframes highlights {
+            0% {
+                color: gold;
+            }
+
+            50% {
+                color: white;
+            }
+
+            100% {
+                color: gold;
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .slides {
+            width: 100%;
+
+            height: auto;
+
+            max-height: 400px;
+
+        }
+
+        .bounce {
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+                color: red;
+            }
+
+            50% {
+                transform: translateY(15px);
+                color: red;
+            }
+        }
+
+        .glow {
+            font-size: 50px;
+            color: #fff;
+            text-align: center;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #333, 0 0 20px #333, 0 0 30px #333;
+            }
+
+            to {
+                text-shadow: 0 0 20px gold, 0 0 30px gold, 0 0 40px gold;
+            }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+            color: red;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 2;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 2;
+            }
+        }
+
+        .color-cycle {
+            animation: colorCycle 1s infinite;
+        }
+
+        @keyframes colorCycle {
+            0% {
+                color: gold;
+            }
+
+            25% {
+                color: red;
+            }
+
+            50% {
+                color: gold;
+            }
+
+            75% {
+                color: red;
+            }
+
+            100% {
+                color: gold;
+            }
+        }
+
+        .drop-shadow {
+            animation: dropShadow 2s infinite alternate;
+        }
+
+        @keyframes dropShadow {
+            from {
+                filter: drop-shadow(0px 0px 0px #000);
+            }
+
+            to {
+                filter: drop-shadow(2px 3px 4px #000);
+            }
+        }
+
+        .rubber-band {
+            animation: rubberBand 1s infinite;
+            color: red;
+        }
+
+        @keyframes rubberBand {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scaleY(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="/Routes/HomePage.html"><img src="/Files/Routes/Logos/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels"></a>
+        <div class="order-lg-2 order-md-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-3 order-md-2" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Routes/HomePage.html" style="color: #fff;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/HomePage.html#locations" style="color: #fff;">DESTINATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/Register.html" style="color: red; animation: pulse 1.5s infinite;">BOOK NOW</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="location-section">
+        <div id="image-carousel" class="slideshow-container">
+            <img class="slides img-fluid" src="/Files/Places/GOA/goa-tour-package-service.png" alt="Image 1">
+            <img class="slides img-fluid" src="/Files/Places/GOA/Goa1.jpg" alt="Image 2">
+            <img class="slides img-fluid" src="/Files/Places/GOA/Goa2.jpg" alt="Image 3">
+            <img class="slides img-fluid" src="/Files/Places/GOA/Goa3.jpg" alt="Image 3">
+            <img class="slides img-fluid" src="/Files/Places/GOA/Goa4.jpg" alt="Image 3">
+            <img class="slides img-fluid" src="/Files/Places/GOA/Goa5.jpg" alt="Image 3">
+            <img class="slides img-fluid" src="/Files/Places/GOA/Goa6.jpg" alt="Image 3">
+            <img class="slides img-fluid" src="/Files/Places/GOA/Goa7.jpg" alt="Image 3">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-16">
+                    <div class="location-heading">
+                        <h1 style="font-size: 130px; color: #fff; text-align: center;animation: colorCycle 5s infinite; ">GOLD PACKAGE<strong><span style="color: #fc0050; font-size: 60Px; animation: colorCycle 5s infinite;"></span></strong></h1>
+                    </div>
+                </div><br><br>
+                <div class="col-md-16">
+                    <div class="location-detail" id="kashmir">
+                        <p style="font-size: 80px; color: #fff;"><strong style="color: red; font-size: 60px; animation: highlightss 1s infinite;">Duration:</strong>
+                            <span class="bounce" style="color: gold; font-size: 80Px; animation: blink 1.85s infinite;">5 Days/4 Nights</span>
+                        </p>
+                        <p style="font-size: 50px; color: #fff;"><strong style="color: red; font-size: 60px; animation: highlightss 1s infinite;">Cost:</strong>
+                            Starting from <span style="color: gold; font-size: 80Px; animation: blink 1.85s infinite;">9,999/-</span> per person</p><br>
+                        <div class="location-heading">
+                            <strong>
+                                <h1 style="color: red; font-size: 60px; animation: bounce 1s infinite;">Inclusions:</h1>
+                            </strong>
+                        </div><br>
+                    </div>
+                    <div class="card" style="background-color: #fff; border: 20px solid red">
+                        <ul>
+                            <li style="font-size: 30px;" type="1">Accommodation in a standard hotel/resort (3-star category)</li>
+                            <li style="font-size: 30px;" type="1">Daily breakfast</li>
+                            <li style="font-size: 30px;" type="1">Sightseeing tours with a vehicle</li>
+                            <li style="font-size: 30px;" type="1">Transfers from airport/railway station to hotel and vice versa</li>
+                            <li style="font-size: 30px;" type="1">Sunset cruise on Mandovi River (private cruise)</li>
+                            <li style="font-size: 30px;" type="1">Welcome drink on arrival</li>
+                            <li style="font-size: 30px;" type="1">Complimentary fruit basket in the room</li>
+                            <li style="font-size: 30px;" type="1">All applicable taxes</li>
+                            <li style="font-size: 30px;" type="1">24/7 customer support</li>
+                        </ul>
+                        <div class="image-container">
+                            <img class="location-image img-fluid" src="/Files/Routes/Inclusions&Exclusions/BreakFast.jpg" alt="">
+                            <img class="location-image img-fluid" src="Files/goavhcl.jpeg" alt="">
+                            <img class="location-image img-fluid" src="/Files/Routes/Inclusions&Exclusions/24 Support.png" alt="">
+                        </div>
+                    </div><br>
+
+                    <div class="location-heading">
+                        ><strong>
+                            <h1 style="color: #fff; font-size: 60px; animation: bounce 1s infinite;">Exclusions:</h1>
+                        </strong>
+                    </div><br>
+                    <div class="card" style="background-color: #fff; border: 20px solid red">
+                        <ul>
+                            <li style="font-size: 30px; color: #000;" type="1">Airfare/train/bus tickets</li>
+                            <li style="font-size: 30px;" type="1">Lunch and dinner (except breakfast)</li>
+                            <li style="font-size: 30px;" type="1">Entry fees to monuments and attractions</li>
+                            <li style="font-size: 30px;" type="1">Personal expenses and tips</li>
+                        </ul>
+                        <div class="image-container">
+                            <img class="location-image img-fluid" src="/Files/Routes/Inclusions&Exclusions/EntryFee.png" alt="">
+                            <img class="location-image img-fluid" src="" alt="">
+                            <img class="location-image img-fluid" src="/Files/Routes/Inclusions&Exclusions/Expenses.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-md-16">
+                    <div class="location-heading">
+                        <br><br>
+                        <h1 style="color: #fff; font-size: 80px; animation: glow 1.5s ease-in-out infinite alternate; text-align: center;">Details Of The <span>GOLD</span> Package<strong><span style="color: #fc0050; font-size: 38px;"></span></h1></strong>
+                    </div><br><br>
+                    <div class="card" style="background-color: #fff; border: 20px solid red;">
+                        <h2></h2>
+                        <ul>
+                            <br>
+                            <h1 style="animation: rubberBand 1s infinite; color: red; font-size: 60px;">Day 1: Arrival in Goa</h1>
+
+                            <br>
+                            <p style="font-size: 25px;">
+                                🌴 Welcome to the land of sun, sand, and sea! As you step foot in the vibrant state of Goa, a paradise awaits you. From the moment you arrive at Goa Airport or Railway Station, our team will be there to greet you with warm smiles and a refreshing welcome drink. Feel the excitement building up as we whisk you away to your cozy abode for the next few days, a comfortable budget hotel nestled in the heart of North Goa.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🏨 After settling into your accommodations, take a moment to unwind and soak in the laid-back atmosphere of your surroundings. Whether you choose to lounge by the poolside or explore the nearby beaches, the choice is yours. As the day transitions into night, feel free to explore the local cuisine or simply relax under the starlit sky. Your Goan adventure has only just begun!
+                            </p> <br>
+                            <h1 style="animation: rubberBand 1s infinite; color: red; font-size: 60px;">Day 2: North Goa Sightseeing</h1><br>
+
+                            <p style="font-size: 25px;">
+                                🌊 Rise and shine, adventurers! Today, we embark on a journey to discover the treasures of North Goa. After indulging in a hearty breakfast, our expert guide will lead the way as we set off to explore the shimmering shores and historic landmarks that define this coastal paradise.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🏖️ Our first stop is Calangute Beach, where the golden sands and azure waters beckon you to unwind and rejuvenate. Next, we delve into history at the iconic Fort Aguada, offering breathtaking views of the Arabian Sea. As we continue our journey, immerse yourself in the eclectic vibe of Anjuna Beach and Baga Beach, where beachside shacks and water sports await.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🏨 As the sun begins its descent, we return to our haven in North Goa, where a comfortable night's rest awaits you.
+                            </p>
+                            <br>
+
+                            <h1 style="animation: rubberBand 1s infinite; color: red; font-size: 60px;">Day 3: South Goa Sightseeing</h1><br>
+                            <p style="font-size: 25px;">
+                                ⛪ Good morning, explorers! Today, we venture southwards to uncover the rich heritage and natural wonders of South Goa. After a delectable breakfast, we set off on a journey through time and tradition, guided by the echoes of ancient tales and architectural marvels.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🕍 Our pilgrimage begins at the Basilica of Bom Jesus, a UNESCO World Heritage Site housing the mortal remains of St. Francis Xavier. We then marvel at the grandeur of Se Cathedral and the exquisite craftsmanship of Church of St. Cajetan. But our adventure doesn't end there! We'll also witness the awe-inspiring Dudhsagar Waterfalls and soak in the panoramic views from the Dona Paula viewpoint.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🌅 As the day draws to a close, we return to our sanctuary in North Goa, filled with memories that will last a lifetime.
+                            </p><br>
+
+                            <h1 style="animation: rubberBand 1s infinite; color: red; font-size: 60px;">Day 4: Mandovi River Sunset Cruise</h1><br>
+
+                            <p style="font-size: 25px;">
+                                🚤 Ahoy, mates! Today, we set sail on a voyage of tranquility and enchantment aboard a shared sunset cruise on the Mandovi River. After a leisurely morning at your own pace, prepare to be whisked away on a magical journey as the sun begins its descent.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🌇 Glide along the serene waters, with the golden hues of the sunset painting the sky in a symphony of colors. Feel the gentle breeze caress your skin as you relax on deck, soaking in the mesmerizing views. With live music to serenade you and the rhythmic sway of the boat, this evening promises to be nothing short of extraordinary.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🌠 After bidding farewell to the sun, we return to our haven in North Goa, where you can reminisce about the day's adventures under the starlit sky.
+                            </p><br>
+
+                            <h1 style="animation: rubberBand 1s infinite; color: red; font-size: 60px;">Day 5: Departure</h1><br>
+
+                            <p style="font-size: 25px;">
+                                🛫 Alas, all good things must come to an end. After indulging in a scrumptious breakfast and bidding adieu to your temporary home in Goa, it's time to embark on the final leg of your journey.
+                            </p><br>
+                            <p style="font-size: 25px;">
+                                🚗 Our team will be on hand to escort you to Goa Airport or Railway Station, where you'll carry with you cherished memories and unforgettable experiences from your time in this coastal paradise. Until we meet again, may your adventures be endless and your spirit always wanderlust-filled. Farewell, and safe travels!
+                            </p><br>
+                            <p style="font-size: 40px; font:900px; color: red;">
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+    <a href="/Routes/Register.html" class="submitbtn" style="text-align: center; animation: pulse 1.5s infinite; color: white; background-color: red;">Book Now</a>
+    <script src="/Scripts/slides.js"></script>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Quick Links</h4>
+                    <ul>
+                        <li style="color: #800080;"><a href="/Routes/Register.html">Register</a></li>
+                        <li style="color: #000000;"><a href="/Routes/BookingDetails.html">Track Your Booking</a></li>
+                        <li style="color: #000000;"><a href="/Routes/Register.html">Book Now</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Contact Us</h4>
+                    <p>If you have any questions or inquiries, feel free to contact us:</p>
+                    <ul>
+                        <li style="color: #fff">Email: <span style="color: teal;">AIAtourandtravels@gmail.com</span></li>
+                        <li style="color: #fff;">Phone: <span style="color: teal;">+91 9392773547</li></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="end">
+            <p>Copyright © 2022 Travels All Rights Reserved.</p>
+        </div>
+    </section>
+    <script src="/web.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

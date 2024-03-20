@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THANK YOU FOR YOUR BOOKING</title>
+    <link rel="icon" href="/Files/Routes/Logos/Logo Tab.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: black;
+            color: #333;
+        }
+
+        nav {
+            background-color: green;
+            box-shadow: 0 9px 5px #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .navbar {
+            background-color: black;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar li,
+        a {
+            margin-right: 20px;
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #fff;
+
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footlinks {
+            flex: 1;
+        }
+
+        .footlinks h4 {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .footlinks ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            color: #333;
+        }
+
+        .footlinks ul li {
+            margin-bottom: 10px;
+            text-align: center;
+            color: #191919;
+        }
+
+        .footlinks a {
+            color: #fff;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+        }
+
+        .social a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .social a i {
+            font-size: 24px;
+        }
+
+        .end {
+            margin-top: 20px;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .image-container {
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+        }
+
+        .btn-container a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .btn-container a:hover {
+            background-color: #45a049;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .title h1 {
+                font-size: 40px;
+                text-align: center;
+                margin-right: 0px;
+                display: block;
+
+            }
+
+            .navbar-brand {
+                position: absolute;
+                left: 0;
+                margin-left: 5px;
+            }
+
+            .navbar-toggler {
+                margin-left: 30%;
+                background-color: #fff;
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            .navbar-nav {
+                margin-left: auto;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .container {
+                padding: 10px;
+            }
+
+            .btn-container a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+        }
+
+        @keyframes highlight {
+            0% {
+                color: red;
+            }
+
+            50% {
+                color: white;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        @keyframes highlights {
+            0% {
+                color: #45a049;
+            }
+
+            50% {
+                color: white;
+            }
+
+            100% {
+                color: #45a049;
+            }
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #fc0050;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .nav-link {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: background-color 1s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #404040
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            background-color: transparent;
+            border-radius: 25px;
+            z-index: -1;
+            transition: background-color 1s ease;
+        }
+
+        .nav-link:hover::before {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .round-button {
+            border: none;
+            background-color: transparent;
+        }
+
+        .round-button:hover .nav-link {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a href="/Routes/HomePage.html"><img src="/Files/Routes/Logos/Logo.png" class="logo" alt="Logo" title="FirstFlight Travels"></a>
+        <div class="order-lg-2 order-md-3">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse order-lg-3 order-md-2" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Routes/HomePage.html" style="color: #fff;">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/HomePage.html#locations" style="color: #fff;">LOCATIONS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Routes/Register.html" style="color: #fc0050;">BOOK NOW</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="image-container">
+            <img src="/Files/Routes/Logos/Thank You.jpg" alt="Thank You Image" width="200">
+        </div>
+        <h1 style="color: #fff; font-size: 48px;">Thank You for <span style="color: #fc0050; animation: highlight 1s infinite;">BOOKING</span></h1>
+        <p style="color: #fff; font-size: 24px;">Your Booking has been successfully completed.</p>
+        <p style="color: #fff; font-size: 24px;">We appreciate your interest in our travel packages.</p>
+        <p style="color: #fff;font-size: 24px;">An <span style="color: #45a049; font-size: 30px; animation: highlights 1s infinite;">Confirmation</span> Email Is Send To Your Email ID</p>
+        <p style="color: #fff;font-size: 24px;">We look forward to serving you!</p>
+        <div class="btn-container">
+            <a href="/Routes/HomePage.html" class="btn">Back to Home</a>
+        </div>
+    </div>
+    <!-- Footer -->
+    <section class="footer">
+        <div class="foot">
+            <div class="footer-content">
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Quick Links</h4>
+                    <ul>
+                        <li style="color: #800080;"><a href="/Routes/Register.html">Register</a></li>
+                        <li style="color: #000000;"><a href="/Routes/BookingDetails.html">Track Your Booking</a></li>
+                        <li style="color: #000000;"><a href="/Routes/Register.html">Book Now</a></li>
+                        <li><a href="/contact">Contact Form</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footlinks">
+                    <h4 style="color: #097969;">Contact Us</h4>
+                    <p>If you have any questions or inquiries, feel free to contact us:</p>
+                    <ul>
+                        <li style="color: #fff">Email: <span style="color: teal;">AIAtourandtravels@gmail.com</span></li>
+                        <li style="color: #fff;">Phone: <span style="color: teal;">+91 9392773547</li></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="end">
+            <p>Copyright © 2022 Travels All Rights Reserved.</p>
+        </div>
+    </section>
+    <script>
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
